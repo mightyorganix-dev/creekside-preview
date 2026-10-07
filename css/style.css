@@ -69,36 +69,21 @@ li { margin-bottom: 0.35em; }
   padding: 0.6rem 0 0.5rem;
 }
 
-/* Full-width brand row across the top */
+/* Full-width banner image across the top */
 .brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  display: block;
   width: 100%;
+  line-height: 0;
   text-decoration: none;
-  color: var(--ink);
   padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--border);
 }
-.brand:hover { text-decoration: none; color: var(--ink); }
-.brand img { height: clamp(48px, 7vw, 76px); width: auto; flex: 0 0 auto; }
-.brand-text {
-  flex: 1 1 auto;
-  font-family: "Old Standard TT", Georgia, serif;
-  font-size: clamp(1.45rem, 4.2vw, 2.85rem);
-  font-weight: 700;
-  line-height: 1.08;
-  text-align: center;
-  letter-spacing: 0.01em;
-}
-.brand-text small {
+.brand img {
   display: block;
-  font-family: Georgia, serif;
-  font-size: clamp(0.72rem, 1.2vw, 0.9rem);
-  font-weight: 400;
-  color: var(--soft);
-  margin-top: 0.15rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 515 / 125;
+  image-rendering: auto;
 }
 
 /* Nav row under the brand */
@@ -395,7 +380,4 @@ li { margin-bottom: 0.35em; }
     white-space: normal;
   }
   .main-nav a[aria-current="page"] { border-bottom-color: var(--link); }
-  .brand { justify-content: flex-start; gap: 0.6rem; }
-  .brand-text { text-align: left; font-size: clamp(1.15rem, 5.2vw, 1.6rem); }
-  .brand img { height: 44px; }
 }
