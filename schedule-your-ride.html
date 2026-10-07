@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs.</div>
+  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs. <span class="preview-live-note">Content loads live from the WordPress site.</span></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
@@ -48,6 +48,7 @@
   <main class="page">
     <div class="wrap page-grid has-side">
       <div class="content">
+        <div class="wp-content" data-wp-page="schedule-your-ride" data-wp-id="275" data-wp-form-note="The live site’s booking calendar isn’t shown in this preview — use the request form below, or call/text 615-595-7547.">
         
         <h1>Schedule a Ride Time</h1>
         <p>Creekside is located at <strong>Cheval Stables</strong> — 3531 Tobe Robertson Rd, Columbia, TN 38401.</p>
@@ -57,7 +58,7 @@
           <a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a>
         </div>
         <p class="note">On the live site, booking uses a calendar widget. This preview uses a placeholder form only — nothing is submitted to a real booking system.</p>
-
+        </div>
         <h2>Request a ride (preview form)</h2>
         <form class="form" data-preview action="#" method="post">
           <label>Your name
@@ -97,7 +98,6 @@
         <p style="margin-top:1.5rem">Or email us directly:
           <a href="mailto:creeksidestables@gmail.com?subject=Ride%20request">creeksidestables@gmail.com</a>
         </p>
-
       </div>
       
       <aside class="sidebar">
@@ -159,6 +159,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/wp.js" defer></script>
   <script src="js/main.js"></script>
 </body>
 </html>

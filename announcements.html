@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs.</div>
+  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs. <span class="preview-live-note">Content loads live from the WordPress site.</span></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
@@ -48,6 +48,8 @@
   <main class="page">
     <div class="wrap page-grid has-side">
       <div class="content">
+        <section class="wp-posts-section" data-wp-posts="10" hidden aria-live="polite"></section>
+        <div class="wp-content" data-wp-page="announcements" data-wp-id="8">
         
         <h1>Announcements</h1>
         <p>50+ acres · Huge outdoor arena · Covered riding arena · Shady trails</p>
@@ -78,7 +80,7 @@
         <h2>Gift certificates</h2>
         <p>Email <a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a> what you would like to purchase. We’ll reply with a printable PDF certificate and instructions on how to pay and activate the gift.</p>
         <p class="note">We take Venmo, Zelle, checks, and cash. No credit or debit cards.</p>
-
+        </div>
       </div>
       
       <aside class="sidebar">
@@ -140,6 +142,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/wp.js" defer></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs.</div>
+  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs. <span class="preview-live-note">Content loads live from the WordPress site.</span></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
@@ -48,6 +48,7 @@
   <main class="page">
     <div class="wrap page-grid has-side">
       <div class="content">
+        <div class="wp-content" data-wp-page="summer-camps" data-wp-id="17" data-wp-form-note="The camp registration form lives on the WordPress site and isn’t shown in this preview. Call/text 615-595-7547 or email creeksidestables@gmail.com.">
         
         <h1>Summer Riding Camp</h1>
         <p><strong>Where horse lovers come to camp!</strong></p>
@@ -103,8 +104,8 @@
         </ul>
 
         <p>Afternoons: horse bathing, feeding, untacking English &amp; Western, hoof care, horse health lessons, water play &amp; more.</p>
+        </div>
         <p><a class="btn" href="contact.html">Ask about camp enrollment</a></p>
-
       </div>
       
       <aside class="sidebar">
@@ -166,6 +167,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/wp.js" defer></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs.</div>
+  <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs. <span class="preview-live-note">Content loads live from the WordPress site.</span></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
@@ -48,6 +48,7 @@
   <main class="page">
     <div class="wrap page-grid has-side">
       <div class="content">
+        <div class="wp-content" data-wp-page="home" data-wp-id="4">
         
         <h1>Home</h1>
         <p>We offer horseback riding near Nashville, Franklin, Thompson’s Station &amp; Columbia, TN. English and Western riding lessons, trail rides, horse sales, boarding, and plenty of opportunities to be around the barn.</p>
@@ -59,6 +60,14 @@
         <h2>Our Mission</h2>
         <p>To bring horseback riding as a sport, recreation, and enjoyment — safely and affordably — to people of all ages. <strong>Beginners welcome.</strong> Please contact us!</p>
 
+
+
+        <h2>Learn more about the owner</h2>
+        <p>Interview with owner Kris Moore:
+          <a href="https://nashvillevoyager.com/interview/inspiring-conversations-with-kristine-moore-of-cheval-stables-creekside-riding-academy-stables/" rel="noopener" target="_blank">Nashville Voyager profile</a>
+        </p>
+        <p>Phone: <a href="tel:6155957547">615-595-7547</a> · Email: <a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a></p>
+        </div>
         <div class="feature-list">
           <article class="feature">
             <img src="images/home-trail.webp" alt="Trail riding at Creekside" width="140" height="140">
@@ -98,13 +107,6 @@
           <a class="btn" href="schedule-your-ride.html">Schedule a Ride</a>
           <a class="btn btn-outline" href="prices-offerings.html">See Prices</a>
         </div>
-
-        <h2>Learn more about the owner</h2>
-        <p>Interview with owner Kris Moore:
-          <a href="https://nashvillevoyager.com/interview/inspiring-conversations-with-kristine-moore-of-cheval-stables-creekside-riding-academy-stables/" rel="noopener" target="_blank">Nashville Voyager profile</a>
-        </p>
-        <p>Phone: <a href="tel:6155957547">615-595-7547</a> · Email: <a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a></p>
-
       </div>
       
       <aside class="sidebar">
@@ -166,6 +168,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/wp.js" defer></script>
   <script src="js/main.js"></script>
 </body>
 </html>
