@@ -492,6 +492,11 @@
       el.appendChild(frag);
       el.setAttribute("data-wp-state", "live");
       el.setAttribute("data-wp-loaded-id", page.id);
+      // mirror the WordPress title into the page hero band, if there is one
+      if (h1.textContent) {
+        var heroTitle = document.querySelector("[data-wp-title]");
+        if (heroTitle) heroTitle.textContent = h1.textContent;
+      }
     }).catch(function (err) {
       el.setAttribute("data-wp-state", "fallback");
       if (root.console) console.info("[wp] keeping static content for", slug || id, "-", err && err.message);

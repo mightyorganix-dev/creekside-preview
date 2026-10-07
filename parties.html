@@ -7,10 +7,12 @@
   <meta name="description" content="Creekside Riding Stables — horseback riding lessons, trail rides, summer camps, and parties near Nashville, Franklin, and Columbia, TN.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#9f1430">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="has-hero inner">
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="preview-banner"><strong>PREVIEW</strong> — Static redesign draft. Not the live site. Booking &amp; payments are stubs. <span class="preview-live-note">Content loads live from the WordPress site.</span></div>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -37,15 +39,17 @@
     </div>
   </header>
 
-  <div class="hero-strip">
+  <section class="page-hero">
+    <img src="images/party.webp" alt="" width="960" height="720" fetchpriority="high">
     <div class="wrap">
-      <img class="logo-wide" src="images/logo.webp" alt="Creekside Riding Academy &amp; Stables" width="900" height="191">
+      <p class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Parties</p>
+      <p class="eyebrow">Celebrate</p>
+      <p class="page-hero-title" data-wp-title>Parties</p>
       <p class="tagline">Horseback riding near Nashville, Franklin, Thompson’s Station &amp; Columbia, TN</p>
-      
     </div>
-  </div>
+  </section>
 
-  <main class="page">
+  <main class="page" id="main">
     <div class="wrap page-grid has-side">
       <div class="content">
         <div class="wp-content" data-wp-page="parties" data-wp-id="225">
@@ -108,36 +112,61 @@
     </div>
   </main>
 
+  <section class="cta-band" aria-labelledby="cta-title">
+    <div class="wrap cta-inner">
+      <div class="reveal">
+        <p class="eyebrow light">Creekside Riding Academy &amp; Stables</p>
+        <h2 id="cta-title">Ready to ride?</h2>
+        <p>Want to ride today? Call, text or email us at <a href="tel:6155957547">615-595-7547</a> · <a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a></p>
+      </div>
+      <div class="btn-row reveal" style="--d:.1s">
+        <a class="btn btn-light" href="schedule-your-ride.html">Schedule a Ride</a>
+        <a class="btn btn-ghost no-arrow" href="tel:6155957547">Call 615-595-7547</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div>
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo.webp" alt="Creekside Riding Academy &amp; Stables" width="900" height="191" loading="lazy">
           <h3>Creekside Riding Academy &amp; Stables</h3>
-          <p>3531 Tobe Robertson Rd, Columbia, TN 38401<br>
-          Phone: <a href="tel:6155957547">615-595-7547</a><br>
-          Email: <a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a></p>
-          <p>Owner: Kris Moore</p>
+          <p>Horseback riding near Nashville, Franklin, Thompson’s Station &amp; Columbia, TN.</p>
+          <p>Owner: Kris Moore · <a href="https://nashvillevoyager.com/interview/inspiring-conversations-with-kristine-moore-of-cheval-stables-creekside-riding-academy-stables/" rel="noopener" target="_blank">Read the interview</a></p>
         </div>
         <div>
           <h3>Explore</h3>
-          <p>
-            <a href="lessons.html">Lessons</a><br>
-            <a href="riding.html">Trail Rides</a><br>
-            <a href="summer-camps.html">Summer Camps</a><br>
-            <a href="parties.html">Parties</a>
-          </p>
+          <ul class="footer-links">
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="riding.html">Trail Rides</a></li>
+            <li><a href="summer-camps.html">Summer Camps</a></li>
+            <li><a href="parties.html">Parties</a></li>
+            <li><a href="prices-offerings.html">Prices &amp; Offerings</a></li>
+          </ul>
         </div>
         <div>
           <h3>Visit</h3>
-          <p>
-            <a href="schedule-your-ride.html">Schedule a Ride</a><br>
-            <a href="boarding-at-cheval.html">Boarding at Cheval</a><br>
-            <a href="contact.html">Contact</a>
-          </p>
+          <ul class="footer-links">
+            <li><a href="schedule-your-ride.html">Schedule a Ride</a></li>
+            <li><a href="boarding-at-cheval.html">Boarding at Cheval</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>3531 Tobe Robertson Rd<br>Columbia, TN 38401</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:6155957547">615-595-7547</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:creeksidestables@gmail.com">creeksidestables@gmail.com</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg><span>Cash, check, Venmo or Zelle<br>(No credit or debit cards)</span></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 Creekside Riding Stables. All rights reserved.
+        <span>&copy; 2026 Creekside Riding Stables. All rights reserved.</span>
+        <span>Preview redesign · content loads live from WordPress</span>
       </div>
     </div>
   </footer>

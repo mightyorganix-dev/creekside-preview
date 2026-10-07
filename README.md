@@ -79,6 +79,19 @@ Before display, the WordPress HTML is cleaned in the browser:
 The preview only ever sends anonymous `GET` requests (no cookies, no login, no API keys).
 Nothing writes to WordPress. This folder does **not** deploy to or modify https://creeksideridingstables.com/
 
+## Design (2026 redesign)
+
+- `css/style.css` — palette as CSS custom properties (barn red `--barn-red`, leather `--leather`, cream/ivory,
+  pasture green `--pasture`, charcoal), Fraunces (headings) + Inter (body) from Google Fonts, fluid `clamp()` sizes.
+- Header: full-width banner image (`.brand img`, swap its `src` to change the banner) with the menu row below;
+  the header shrinks and gets a blurred backdrop on scroll.
+- Home: full-bleed photo hero (crossfade + slow zoom), facts strip (only facts already on the site),
+  live WordPress content, offerings cards with inline SVG icons, “Ready to ride?” band, rich footer.
+- Inner pages: photo hero band with the page title (updated to the WordPress page title once it loads).
+- One image treatment everywhere (rounded corners, white frame, soft shadow, hover lift), including WP images.
+- `js/main.js` — mobile menu, preview form stub, sticky-header shrink, scroll reveal (IntersectionObserver).
+- All motion is disabled under `prefers-reduced-motion`. No frameworks.
+
 ## Intentionally stubbed
 
 - No real booking calendar / Appointment Booking / BookingPress
