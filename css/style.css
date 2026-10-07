@@ -729,3 +729,5 @@ strong, b { color: var(--ink); font-weight: 650; }
 .form label { min-width: 0; }
 .form input, .form select, .form textarea { width: 100%; min-width: 0; max-width: 100%; }
 @media (max-width: 860px) { .hero-scroll { display: none; } }
+
+.footer-crest{width:48px;height:48px;border-radius:10px;box-shadow:var(--shadow-sm,0 2px 8px rgba(0,0,0,.15));margin-bottom:.5rem;}
