@@ -1,0 +1,380 @@
+/* Creekside Riding Stables — static preview
+   Inspired by Themify Agency look: Georgia body, Old Standard TT headings, warm link brown */
+:root {
+  --ink: #313131;
+  --muted: #666;
+  --soft: #999;
+  --link: #997551;
+  --link-hover: #7a5c3e;
+  --bg: #fff;
+  --panel: #f7f5f2;
+  --border: #ddd;
+  --accent: #997551;
+  --footer-bg: #313131;
+  --footer-fg: #ddd;
+  --max: 980px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--muted);
+  font: 0.95rem/1.55 Georgia, "Times New Roman", Times, serif;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+h1, h2, h3, h4 {
+  font-family: "Old Standard TT", Georgia, serif;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1em; }
+ul, ol { margin: 0 0 1em; padding-left: 1.35em; }
+li { margin-bottom: 0.35em; }
+
+.wrap {
+  width: min(100% - 2rem, var(--max));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand:hover { text-decoration: none; color: var(--ink); }
+.brand img { height: 52px; width: auto; }
+.brand-text {
+  font-family: "Old Standard TT", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.brand-text small {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--soft);
+}
+
+.nav-toggle {
+  display: none;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding: 0.55rem 0.85rem;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.85rem;
+  justify-content: flex-end;
+}
+.main-nav a {
+  color: var(--ink);
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 2px solid var(--link);
+}
+
+/* Hero / logo strip */
+.hero-strip {
+  background: linear-gradient(180deg, #faf8f5 0%, #fff 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0 1rem;
+  text-align: center;
+}
+.hero-strip .logo-wide {
+  margin: 0 auto 0.75rem;
+  max-width: 720px;
+}
+.hero-strip .tagline {
+  color: var(--soft);
+  font-style: italic;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Layout with optional sidebar feel on wide screens */
+.page {
+  padding: 1.75rem 0 2.5rem;
+}
+.page-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+@media (min-width: 860px) {
+  .page-grid.has-side {
+    grid-template-columns: 1fr 240px;
+  }
+}
+
+.content section + section { margin-top: 1.75rem; }
+
+.side-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 1rem 1.1rem;
+  border-radius: 4px;
+}
+.side-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.side-card p, .side-card li { font-size: 0.88rem; }
+.side-nav { list-style: none; padding: 0; margin: 0; }
+.side-nav a {
+  display: block;
+  padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--border);
+  color: var(--ink);
+  font-size: 0.88rem;
+}
+.side-nav a:hover { color: var(--link); }
+
+/* Cards / prices */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.card {
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 1rem 1.1rem;
+  border-radius: 4px;
+}
+.card h3 { margin-bottom: 0.35rem; }
+.price {
+  font-family: "Old Standard TT", Georgia, serif;
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+}
+.note {
+  font-size: 0.88rem;
+  color: var(--soft);
+  font-style: italic;
+}
+.callout {
+  background: var(--panel);
+  border-left: 4px solid var(--accent);
+  padding: 0.9rem 1rem;
+  margin: 1rem 0;
+}
+.badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.figure {
+  margin: 0 0 1rem;
+}
+.figure img {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+.figure figcaption {
+  font-size: 0.82rem;
+  color: var(--soft);
+  margin-top: 0.35rem;
+}
+
+.gallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: 1rem 0;
+}
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.65rem 1.1rem;
+  border-radius: 3px;
+  text-decoration: none !important;
+  font-size: 0.92rem;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover { background: var(--link-hover); }
+.btn-outline {
+  background: transparent;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent);
+}
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+
+/* Forms (placeholder only) */
+.form {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 520px;
+}
+.form label {
+  display: grid;
+  gap: 0.3rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+.form input, .form select, .form textarea {
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--ink);
+  background: #fff;
+}
+.form textarea { min-height: 110px; resize: vertical; }
+.form-note {
+  font-size: 0.85rem;
+  color: var(--soft);
+}
+
+/* Home feature blocks */
+.feature-list {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 700px) {
+  .feature-list { grid-template-columns: 1fr 1fr; }
+}
+.feature {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 500px) {
+  .feature { grid-template-columns: 140px 1fr; align-items: start; }
+}
+.feature img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--footer-bg);
+  color: var(--footer-fg);
+  padding: 1.75rem 0 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+.site-footer a { color: #e8d9c4; }
+.site-footer a:hover { color: #fff; }
+.footer-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 700px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+}
+.site-footer h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.footer-bottom {
+  margin-top: 1.25rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #555;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+.preview-banner {
+  background: #4a3728;
+  color: #f5efe6;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+}
+.preview-banner strong { color: #fff; }
+
+/* Mobile */
+@media (max-width: 820px) {
+  .nav-toggle { display: inline-block; }
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+  .main-nav.is-open { display: block; }
+  .header-inner { flex-wrap: wrap; }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.35rem 0 0.5rem;
+  }
+  .main-nav a {
+    display: block;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+  }
+  .main-nav a[aria-current="page"] { border-bottom-color: var(--link); }
+  .brand img { height: 42px; }
+}
