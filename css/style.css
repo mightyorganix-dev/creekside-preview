@@ -77,17 +77,17 @@ li { margin-bottom: 0.35em; }
   color: var(--ink);
 }
 .brand:hover { text-decoration: none; color: var(--ink); }
-.brand img { height: 52px; width: auto; }
+.brand img { height: 64px; width: auto; }
 .brand-text {
   font-family: "Old Standard TT", Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.55rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
 }
 .brand-text small {
   display: block;
   font-family: Georgia, serif;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 400;
   color: var(--soft);
 }
@@ -134,7 +134,7 @@ li { margin-bottom: 0.35em; }
 }
 .hero-strip .logo-wide {
   margin: 0 auto 0.75rem;
-  max-width: 720px;
+  max-width: 900px;
 }
 .hero-strip .tagline {
   color: var(--soft);
