@@ -63,33 +63,51 @@ li { margin-bottom: 0.35em; }
 
 .header-inner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.65rem 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  padding: 0.6rem 0 0.5rem;
 }
 
+/* Full-width brand row across the top */
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
   text-decoration: none;
   color: var(--ink);
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
 }
 .brand:hover { text-decoration: none; color: var(--ink); }
-.brand img { height: 64px; width: auto; }
+.brand img { height: clamp(48px, 7vw, 76px); width: auto; flex: 0 0 auto; }
 .brand-text {
+  flex: 1 1 auto;
   font-family: "Old Standard TT", Georgia, serif;
-  font-size: 1.55rem;
+  font-size: clamp(1.45rem, 4.2vw, 2.85rem);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.08;
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 .brand-text small {
   display: block;
   font-family: Georgia, serif;
-  font-size: 0.78rem;
+  font-size: clamp(0.72rem, 1.2vw, 0.9rem);
   font-weight: 400;
   color: var(--soft);
+  margin-top: 0.15rem;
+}
+
+/* Nav row under the brand */
+.header-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
 }
 
 .nav-toggle {
@@ -103,14 +121,15 @@ li { margin-bottom: 0.35em; }
   border-radius: 3px;
 }
 
+.main-nav { width: 100%; }
 .main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.15rem 0.85rem;
-  justify-content: flex-end;
+  gap: 0.15rem 0.95rem;
+  justify-content: center;
 }
 .main-nav a {
   color: var(--ink);
@@ -362,7 +381,7 @@ li { margin-bottom: 0.35em; }
     width: 100%;
   }
   .main-nav.is-open { display: block; }
-  .header-inner { flex-wrap: wrap; }
+  .header-nav-row { justify-content: flex-start; flex-wrap: wrap; }
   .main-nav ul {
     flex-direction: column;
     align-items: stretch;
@@ -376,5 +395,7 @@ li { margin-bottom: 0.35em; }
     white-space: normal;
   }
   .main-nav a[aria-current="page"] { border-bottom-color: var(--link); }
-  .brand img { height: 42px; }
+  .brand { justify-content: flex-start; gap: 0.6rem; }
+  .brand-text { text-align: left; font-size: clamp(1.15rem, 5.2vw, 1.6rem); }
+  .brand img { height: 44px; }
 }
