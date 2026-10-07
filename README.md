@@ -92,6 +92,15 @@ Nothing writes to WordPress. This folder does **not** deploy to or modify https:
 - `js/main.js` — mobile menu, preview form stub, sticky-header shrink, scroll reveal (IntersectionObserver).
 - All motion is disabled under `prefers-reduced-motion`. No frameworks.
 
+## Live chat (Crisp)
+
+The Crisp live-chat widget is on every page. Each of the 10 pages includes
+`<script src="js/crisp.js" defer></script>` just before `</body>`; `js/crisp.js` sets
+`window.$crisp = []` and `window.CRISP_WEBSITE_ID = "d2bfd652-059b-428e-b2e4-0c606777b3f8"`, then
+loads `https://client.crisp.chat/l.js` async. The chat bubble sits fixed in the bottom-right corner in its own
+layer, so it does not overlap the sticky header or mobile menu, and no site CSS/JS was changed for it.
+Chats are answered in the Crisp dashboard (crisp.chat), not in WordPress.
+
 ## Intentionally stubbed
 
 - No real booking calendar / Appointment Booking / BookingPress
